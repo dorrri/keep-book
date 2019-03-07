@@ -1,9 +1,10 @@
 import React from 'react';
 import Ionicon from 'react-ionicons';
+import PropTypes from 'prop-types';
 
 const PriceList=({items,onModifyItem,onDeleteItem})=>{
 	return (
-		<ul>
+		<ul className="my-2 p-0">
 			{
 				items.map((item)=>(
 					<li className="list-group-item d-flex
@@ -13,8 +14,8 @@ const PriceList=({items,onModifyItem,onDeleteItem})=>{
 						<span className="col-1">
 							<Ionicon
 								className="rounded-circle"
-								font-size="30px"
-								style={{backgroundColor:'#007bff',padding:'1px'}}
+								fontSize="30px"
+								style={{backgroundColor:'#007bff',padding:'3px'}}
 								color={'#fff'}
 								icon={item.category.iconName}
 							/>
@@ -29,23 +30,27 @@ const PriceList=({items,onModifyItem,onDeleteItem})=>{
 						<span className="col-2">
 							{item.date}
 						</span>
-						<a className="col-1"
-								onClick={()=>{onModifyItem(item)}}
+						<a
+							className="col-1"
+							href="#"
+							onClick={()=>{onModifyItem(item)}}
 						>
 							<Ionicon
 								className="rounded-circle"
-								font-size="30px"
-								style={{backgroundColor:'#28a745',padding:'1px'}}
+								fontSize="30px"
+								style={{backgroundColor:'#28a745',padding:'3px'}}
 								color={'#fff'}
 								icon='ios-create-outline'
 							/>
 						</a>
-						<a className="col-1"
-								onClick={()=>{onDeleteItem(item)}}
+						<a
+							className="col-1"
+							href="#"
+							onClick={()=>{onDeleteItem(item)}}
 						>
 							<Ionicon
 								className="rounded-circle"
-								font-size="30px"
+								fontSize="30px"
 								style={{backgroundColor:'#dc3545',padding:'1px'}}
 								color={'#fff'}
 								icon='ios-close'
@@ -56,6 +61,16 @@ const PriceList=({items,onModifyItem,onDeleteItem})=>{
 			}
 		</ul>
 	)
+};
+
+PriceList.propTypes={
+    items:PropTypes.array.isRequired,
+	onModifyItem:PropTypes.func.isRequired,
+	onDeleteItem:PropTypes.func.isRequired,
+};
+
+PriceList.defaultProps={
+	onModifyItem:()=>{}
 };
 
 export default PriceList
