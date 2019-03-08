@@ -6,7 +6,12 @@ import {LIST_VIEW,CHART_VIEW} from '../utility'
 const generateLinkClass=(current,view)=>{
    return (current===view)?'nav-link active':'nav-link'
 };
-const ViewTab=({activeTab,onTabChange})=>(
+
+const changeTab=(event)=>{
+
+};
+const ViewTab=({activeTab,onTabChange})=>
+	(
 	<ul className="nav nav-tabs nav-fill my-4">
 		<li className="nav-item">
 			<a

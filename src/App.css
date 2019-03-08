@@ -1,6 +1,11 @@
+body {
+  background-color: #efefef !important;
+}
 .App {
   text-align: center;
 }
 
-
+.container {
+  background-color: white;
+}
 

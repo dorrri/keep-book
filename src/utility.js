@@ -22,3 +22,18 @@ export const parseToYearAndMonth=(str)=>{
 		month:date.getMonth()+1
 	}
 };
+
+export const isValidDate = (dateString) => {
+	const regEx = /^\d{4}-\d{2}-\d{2}$/;
+	if(!dateString.match(regEx)) return false;  // Invalid format
+	const d = new Date(dateString);
+	if(Number.isNaN(d.getTime())) return false; // Invalid date
+	return d.toISOString().slice(0,10) === dateString;
+};
+
+export const flatternArr=(arr)=>{
+	return arr.reduce((map,item)=>{
+		map[item.id]=item;
+		return map;
+	},{})
+};

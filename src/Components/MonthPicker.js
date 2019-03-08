@@ -12,10 +12,10 @@ class MonthPicker extends React.Component{
 		};
 	}
 	componentDidMount() {
-		// document.addEventListener('click',this.handleClick,false);
+		document.addEventListener('click',this.handleClick,false);
 	};
     componentWillUnmount() {
-		// document.removeEventListener('click',this.handleClick,false);
+		document.removeEventListener('click',this.handleClick,false);
 	};
     handleClick=(event)=>{
 	    if(this.node.contains(event.target)){
@@ -54,15 +54,21 @@ class MonthPicker extends React.Component{
 		const yearRange=range(9,-4).map(number=>number+originYear);
 		const selectedYear=this.state.selectedYear;
 		return (
-			<div className="month-picker-com dropdown">
+			<div className="month-picker-com dropdown" ref={(ref)=>{this.node=ref}}>
 				<button
 					className="btn btn-lg btn-secondary dropdown-toggle"
+					id="month-picker-dropdown-btn"
 					onClick={this.toggleDropdown}
 				>
 					{`${year}年 ${padLeft(month)}月`}
 				</button>
 				{ isOpen &&
-					<div className="dropdown-menu" style={{display:'block'}}>
+					<div
+						className="dropdown-menu"
+						style={{display:'block'}}
+						role="menu"
+						aria-labelledby="month-picker-dropdown-btn"
+					>
                         <div className="row">
 							<div className="years-range col border-right">
 								{yearRange.map((yearNumber,index)=>
