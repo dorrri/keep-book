@@ -14,15 +14,26 @@ const tabsText=[TYPE_OUTCOME,TYPE_INCOME];
 class Create extends React.Component{
     constructor(props){
     	super(props);
-    	const {id}=props.match.params;
-    	const {items, categories}=props.data;
     	this.state={
-    		selectedTab:(id && items[id])? categories[items[id].cid].type:TYPE_OUTCOME,
-			selectedCategory:(id && items[id])? categories[items[id].cid]:null,
+    		selectedTab:TYPE_OUTCOME,
+			selectedCategory:null,
+			editItem:{},
 			validePass:true,
 			errorMessage:'',
-		}
+		};
 	}
+	componentDidMount() {
+		const {id}=this.props.match.params;
+		this.props.actions.getEditData(id).then(data=>{
+			const {editItem,categories}=data;
+			this.setState({
+				selectedTab: (id && editItem) ? categories[editItem.data.cid].type : TYPE_OUTCOME,
+				selectedCategory: (id && editItem) ? categories[editItem.data.cid] : null,
+				editItem:editItem.data
+			});
+		});
+	}
+
 	tabChange=(index)=>{
     	this.setState({
 			selectedTab:tabsText[index],
@@ -77,7 +88,7 @@ class Create extends React.Component{
 				<PriceForm
 					onFormSubmit={this.formSubmit}
 					onCancelSubmit={this.cancelSubmit}
-					item={editItem}
+					item={(editItem==={})?editItem:this.state.editItem}
 				/>
 				{ !this.state.validePass &&
 				<div className="alert alert-danger mt-5" role="alert">

@@ -1,0 +1,156 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "旅游",
+      "type": "outcome",
+      "iconName": "ios-plane"
+    },
+    {
+      "id": 2,
+      "name": "餐饮",
+      "type": "outcome",
+      "iconName": "ios-cafe"
+    },
+    {
+      "id": 3,
+      "name": "交通",
+      "type": "outcome",
+      "iconName": "ios-bus"
+    },
+    {
+      "id": 4,
+      "name": "购物",
+      "type": "outcome",
+      "iconName": "ios-cart"
+    },
+    {
+      "id": 5,
+      "name": "医疗",
+      "type": "outcome",
+      "iconName": "ios-medkit"
+    },
+    {
+      "id": 6,
+      "name": "娱乐",
+      "type": "outcome",
+      "iconName": "ios-microphone"
+    }
+  ],
+  "items": [
+    {
+      "title": "新的吃饭",
+      "price": 2000,
+      "date": "2018-11-15",
+      "id": "_qmatbbw11",
+      "cid": "2",
+      "monthCategory": "2018-11",
+      "timestamp": 1542896269187
+    },
+    {
+      "title": "请别人喝茶",
+      "price": 300,
+      "date": "2018-11-15",
+      "id": "_qryggm533",
+      "cid": "2",
+      "monthCategory": "2018-11",
+      "timestamp": 1534291200000
+    },
+    {
+      "title": "饭局",
+      "price": 200,
+      "date": "2018-12-10",
+      "id": "_qmatbbw12",
+      "cid": "2",
+      "monthCategory": "2018-12",
+      "timestamp": 1544400000000
+    },
+    {
+      "title": "旅游",
+      "price": 500,
+      "date": "2018-12-05",
+      "monthCategory": "2018-12",
+      "timestamp": 1543968000000,
+      "id": "_2cdxkbtzi",
+      "cid": "1"
+    },
+    {
+      "title": "公交费",
+      "price": 100,
+      "date": "2018-12-05",
+      "monthCategory": "2018-12",
+      "timestamp": 1543968000000,
+      "id": "_znmwyaciy",
+      "cid": "3"
+    },
+    {
+      "title": "汽车保养",
+      "price": 500,
+      "date": "2018-12-09",
+      "monthCategory": "2018-12",
+      "timestamp": 1544313600000,
+      "id": "_2c96vz8d7",
+      "cid": "4"
+    },
+    {
+      "title": "超市购物",
+      "price": 125,
+      "date": "2018-12-04",
+      "monthCategory": "2018-12",
+      "timestamp": 1543881600000,
+      "id": "_j0z9no9jk",
+      "cid": "4"
+    },
+    {
+      "title": "购买 iphone XR",
+      "price": 6000,
+      "date": "2018-12-03",
+      "monthCategory": "2018-12",
+      "timestamp": 1543795200000,
+      "id": "_yiwdttati",
+      "cid": "4"
+    },
+    {
+      "title": "超市买水果",
+      "price": 100,
+      "date": "2019-03-04",
+      "monthCategory": "2019-03",
+      "timestamp": 1543881600000,
+      "id": "_j0z9no9oj",
+      "cid": "4"
+    },
+    {
+      "title": "新的旅游-2",
+      "price": 3000,
+      "date": "2019-03-08",
+      "monthCategory": "2019-03",
+      "timestamp": 1552003200000,
+      "id": "_gihfm2daa",
+      "cid": 1,
+      "category": {
+        "id": 1,
+        "name": "旅游",
+        "type": "outcome",
+        "iconName": "ios-plane"
+      }
+    },
+    {
+      "title": "吃饭",
+      "price": 200,
+      "date": "2019-02-13",
+      "monthCategory": "2019-02",
+      "timestamp": 1550016000000,
+      "id": "_di1zmq35e",
+      "cid": 2
+    },
+    {
+      "title": "吃饭-2",
+      "price": 220,
+      "date": "2019-02-15",
+      "monthCategory": "2019-02",
+      "timestamp": 1550188800000,
+      "id": "_uym1sudqk",
+      "cid": 2
+    }
+  ]
+}

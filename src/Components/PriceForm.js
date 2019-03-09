@@ -3,10 +3,13 @@ import PropTypes from 'prop-types';
 import {isValidDate} from '../utility'
 
 class PriceForm extends React.Component{
-	state={
-		validatePass:true,
-		errorMessage:'',
-	};
+	constructor(props) {
+		super(props);
+		this.state={
+			validatePass:true,
+			errorMessage:'',
+		};
+	}
 	submitForm=(event)=>{
 	    const {item,onFormSubmit}=this.props;
 	    const editMode=!!item.id;

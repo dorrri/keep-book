@@ -59,10 +59,7 @@ const PriceList=({items,onModifyItem,onDeleteItem})=>{
 					</li>
 				))
 			}
-			{
-				items.length===0 &&
-				<div>你还没有任何记账记录</div>
-			}
+
 		</ul>
 	)
 };

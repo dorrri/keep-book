@@ -3,47 +3,38 @@ import PropTypes from 'prop-types';
 import Ionicon from 'react-ionicons';
 
 class CategorySelect extends React.Component{
-	constructor(props){
-		super(props);
-		this.state={
-			selectedCategoryId:props.selectedCategory && (props.selectedCategory.id-1+""),
-		}
-	}
-	selectCategory=(event,id)=>{
+	selectCategory=(event,category)=>{
 		event.preventDefault();
-		this.setState({
-			selectedCategoryId:id,
-		});
-		this.props.onSelectCategory(this.props.categories[id]);
+		this.props.onSelectCategory(category);
 	};
 	render() {
-		const {categories}=this.props;
-		const selectedCategoryId=this.state.selectedCategoryId;
+		const {categories,selectedCategory}=this.props;
+		const selectedCategoryId=selectedCategory && (selectedCategory.id);
 		return (
 			<div className="category-select-com">
 				<div className="row">
-					{Object.keys(categories).map(id => {
-						const backColor=(selectedCategoryId === id)?'#007bff':'#ccc';
-						const activeClassName = (selectedCategoryId === id) ?
+					{categories.map((category,index) => {
+						const backColor=(selectedCategoryId === category.id)?'#007bff':'#ccc';
+						const activeClassName = (selectedCategoryId === category.id) ?
 							'category-item col-2 active' : 'category-item col-2';
 						return (
 							<a
 								className={activeClassName}
-								key={id}
+								key={index}
 								href="#"
 								style={{textDecoration:'none'}}
 								onClick={(event) => {
-									 this.selectCategory(event, id)
+									 this.selectCategory(event, category)
 								}}
 							>
 								<Ionicon
 									className="rounded-circle"
 									fontSize="50px"
 									color="#fff"
-									icon={categories[id].iconName}
+									icon={category.iconName}
 									style={{backgroundColor:backColor,padding:'8px'}}
 								/>
-								<p style={{color:backColor}}>{categories[id].name}</p>
+								<p style={{color:backColor}}>{category.name}</p>
 							</a>
 						)
 					})
