@@ -13,6 +13,7 @@ class PriceForm extends React.Component{
 	submitForm=(event)=>{
 	    const {item,onFormSubmit}=this.props;
 	    const editMode=!!item.id;
+
 	    const price=this.priceInput.value.trim()*1;
 	    const title=this.titleInput.value.trim();
 	    const date=this.dateInput.value.trim();

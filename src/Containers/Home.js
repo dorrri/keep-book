@@ -2,6 +2,8 @@ import React from 'react';
 import Ionicon from 'react-ionicons';
 import {withRouter} from "react-router-dom";
 import withContext from '../WithContext'
+import PropTypes from 'prop-types';
+import PieChart from '../Components/PieChart'
 
 import PriceList from '../Components/PriceList';
 import TotalPrice from '../Components/TotalPrice'
@@ -10,11 +12,30 @@ import CreateBtn from '../Components/CreateBtn'
 import {Tabs,Tab} from  '../Components/Tabs'
 import Loader from '../Components/Loader'
 
-import {LIST_VIEW,CHART_VIEW,TYPE_INCOME,TYPE_OUTCOME} from "../utility";
+import {LIST_VIEW,CHART_VIEW,TYPE_INCOME,TYPE_OUTCOME,Colors} from "../utility";
 
 
 
 const tabsText=[LIST_VIEW,CHART_VIEW];
+
+const generateChartDataByGategory=(items,type)=>{
+	let categoryMap={};
+	items.filter(item=>item.category.type===type).forEach(item=>{
+		if (categoryMap[item.cid]){
+			categoryMap[item.cid].value+=(item.price*1);
+			categoryMap[item.cid].items.push(item.id);
+		} else {
+			categoryMap[item.cid]={
+				name:item.category.name,
+				value:item.price*1,
+				items:[item.id]
+			}
+		}
+	});
+	return Object.keys(categoryMap).map(mapKey=>{
+		return {...categoryMap[mapKey]};
+	});
+};
 
 class Home extends React.Component{
 	constructor(props){
@@ -51,6 +72,9 @@ class Home extends React.Component{
 			items[id].category=categories[items[id].cid];
 			return items[id];
 		});
+		const chartOutcomeDataByCategory=generateChartDataByGategory(itemsWithCategory,TYPE_OUTCOME);
+		const chartIncomeDataByCategory=generateChartDataByGategory(itemsWithCategory,TYPE_INCOME);
+		// console.log(chartOutcomeDataByCategory);
 		const tabIndex=tabsText.findIndex(tabText=>tabText===tabView);
 		let totalIncome=0,totalOutcome=0;
 		itemsWithCategory.forEach(item=>{
@@ -118,12 +142,28 @@ class Home extends React.Component{
 					/>
 					}
 					{tabView === CHART_VIEW &&
-					<div className="chart-title">图表</div>
+					<React.Fragment>
+						<div className="row">
+							<div className="col">
+								<PieChart title="本月支出" categoryData={chartOutcomeDataByCategory}/>
+							</div>
+							<div className="col">
+								<PieChart title="本月收入" categoryData={chartIncomeDataByCategory}/>
+							</div>
+						</div>
+					</React.Fragment>
 					}
 				</div>
 			</div>
 		)
 	}
 }
+
+Home.propTypes = {
+	data: PropTypes.object.isRequired,
+	actions: PropTypes.object.isRequired,
+	history: PropTypes.object,
+	match: PropTypes.object,
+};
 
 export default withRouter(withContext(Home));

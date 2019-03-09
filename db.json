@@ -121,7 +121,7 @@
     },
     {
       "title": "新的旅游-2",
-      "price": 3000,
+      "price": 300,
       "date": "2019-03-08",
       "monthCategory": "2019-03",
       "timestamp": 1552003200000,
@@ -151,6 +151,15 @@
       "timestamp": 1550188800000,
       "id": "_uym1sudqk",
       "cid": 2
+    },
+    {
+      "title": "公交费",
+      "price": 50,
+      "date": "2019-03-09",
+      "monthCategory": "2019-03",
+      "timestamp": 1552089600000,
+      "id": "_xs4optuuy",
+      "cid": 3
     }
   ]
 }

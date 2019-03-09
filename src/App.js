@@ -60,7 +60,6 @@ class App extends Component {
 			  this.setState({
 				  categories:finalCategories,
 				  isLoading: false,
-				  //items:{...this.state.items,[id]:editItem}
 			  });
 		  	  return {
 		  	  	categories:finalCategories,
