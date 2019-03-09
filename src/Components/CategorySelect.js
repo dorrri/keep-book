@@ -6,7 +6,7 @@ class CategorySelect extends React.Component{
 	constructor(props){
 		super(props);
 		this.state={
-			selectedCategoryId:props.selectedCategory && props.selectedCategory.id,
+			selectedCategoryId:props.selectedCategory && (props.selectedCategory.id-1+""),
 		}
 	}
 	selectCategory=(event,id)=>{
@@ -55,7 +55,7 @@ class CategorySelect extends React.Component{
 }
 
 CategorySelect.propTypes={
-	categories:PropTypes.object.isRequired,
+	categories:PropTypes.array.isRequired,
 	onSelectCategory:PropTypes.func.isRequired,
 	selectedCategory:PropTypes.object,
 };

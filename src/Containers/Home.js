@@ -28,9 +28,7 @@ class Home extends React.Component{
 		})
 	};
 	changeDate=(year,month)=>{
-        this.setState({
-			currentDate:{year,month},
-		})
+        this.props.actions.selectNewDate(year,month);
 	};
 	modifyItem=(modifiedItem)=>{
         this.props.history.push(`/edit/${modifiedItem.id}`)
@@ -49,6 +47,8 @@ class Home extends React.Component{
 			items[id].category=categories[items[id].cid];
 			return items[id];
 		});
+		const filtereditemsWithCategory=itemsWithCategory
+			.filter(item=>item.date.indexOf(`${currentDate.year}-${currentDate.month}`)!==-1);//has(`${currentDate.year}-${currentDate.month}`)
 		const tabIndex=tabsText.findIndex(tabText=>tabText===tabView);
 		let totalIncome=0,totalOutcome=0;
 		itemsWithCategory.forEach(item=>{
@@ -105,7 +105,7 @@ class Home extends React.Component{
 					{tabView === LIST_VIEW &&
 					<PriceList
 						onModifyItem={this.modifyItem}
-						items={itemsWithCategory}
+						items={filtereditemsWithCategory}
 						onDeleteItem={this.deleteItem}
 					/>
 					}

@@ -50,17 +50,17 @@ class MonthPicker extends React.Component{
 		const year=this.state.selectedYear;
 		const month=this.state.selectedMonth;
 		const isOpen=this.state.isOpen;
-		const monthRange=range(12,1);
+		const monthRange=range(12,1).map(month=>padLeft(month));
 		const yearRange=range(9,-4).map(number=>number+originYear);
 		const selectedYear=this.state.selectedYear;
 		return (
-			<div className="month-picker-com dropdown" ref={(ref)=>{this.node=ref}}>
+			<div className="month-picker-com dropdown text-left" ref={(ref)=>{this.node=ref}}>
 				<button
 					className="btn btn-lg btn-secondary dropdown-toggle"
 					id="month-picker-dropdown-btn"
 					onClick={this.toggleDropdown}
 				>
-					{`${year}年 ${padLeft(month)}月`}
+					{`${year}年 ${month}月`}
 				</button>
 				{ isOpen &&
 					<div
@@ -90,7 +90,7 @@ class MonthPicker extends React.Component{
 										className={(monthNumber===month)?"dropdown-item active":"dropdown-item"}
 										onClick={(event)=>{this.selectMonth(event,monthNumber)}}
 									>
-										{padLeft(monthNumber)}月
+										{monthNumber}月
 									</a>
 								)}
 							</div>

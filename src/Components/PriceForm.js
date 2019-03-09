@@ -33,7 +33,7 @@ class PriceForm extends React.Component{
 	    	if (editMode){
 	    		onFormSubmit({...item,title,price,date},editMode)
 			} else {
-	    		onFormSubmit({title,price,date},editMode)
+				onFormSubmit({title,price,date},editMode)
 			}
 		}else {
 	    	this.setState({

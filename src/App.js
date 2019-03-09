@@ -16,7 +16,7 @@ class App extends Component {
       this.state={
           items:flatternArr(testItems),
           categories:flatternArr(testCategories),
-          currentDate:parseToYearAndMonth(),
+          currentDate:parseToYearAndMonth('2018-08-10'),
       };
       this.actions={
           deleteItem:(item)=>{
@@ -25,9 +25,31 @@ class App extends Component {
                   items:this.state.items,
               })
           },
-          createItem:(data)=>{
-
+          createItem:(data,categoryId)=>{
+          	  const newId=Object.keys(this.state.items).length+1;
+          	  const parsedDate=parseToYearAndMonth(data.date);
+          	  data.timestamp=new Date(data.date).getTime();
+          	  const newItem={...data, id:newId, cid:categoryId,};
+          	  console.log(newItem);
+          	  this.setState({
+				  items:{...this.state.items, [newId]:newItem},
+			  })
           },
+		  selectNewDate:(year,month)=>{
+			  this.setState({
+				  currentDate:{year,month},
+			  });
+		  },
+		  updateItem:(item, updatedCategoryId)=>{
+          	  const modifiedItem={
+          	  	  ...item,
+				  cid: updatedCategoryId,
+				  timestamp:new Date(item.date).getTime(),
+			  };
+			  this.setState({
+				  items:{...this.state.items, [modifiedItem.id]:modifiedItem},
+			  });
+	      },
       }
   }
     render() {
