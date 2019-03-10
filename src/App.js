@@ -115,7 +115,7 @@ class App extends Component {
             actions:this.actions,
         }}>
         <Router>
-            <div className="container p-3">
+            <div className="container px-3 pb-3">
                 <div className="App">
                     <Route path="/" exact component={Home}/>
                     <Route path="/create" component={Create}/>

@@ -15,7 +15,6 @@ import Loader from '../Components/Loader'
 import {LIST_VIEW,CHART_VIEW,TYPE_INCOME,TYPE_OUTCOME,Colors} from "../utility";
 
 
-
 const tabsText=[LIST_VIEW,CHART_VIEW];
 
 const generateChartDataByGategory=(items,type)=>{
@@ -74,7 +73,6 @@ class Home extends React.Component{
 		});
 		const chartOutcomeDataByCategory=generateChartDataByGategory(itemsWithCategory,TYPE_OUTCOME);
 		const chartIncomeDataByCategory=generateChartDataByGategory(itemsWithCategory,TYPE_INCOME);
-		// console.log(chartOutcomeDataByCategory);
 		const tabIndex=tabsText.findIndex(tabText=>tabText===tabView);
 		let totalIncome=0,totalOutcome=0;
 		itemsWithCategory.forEach(item=>{
@@ -87,18 +85,23 @@ class Home extends React.Component{
 		return (
 			<div className='create-page rounded'>
 				<header className="header">
-					<div className="row mb-5">
-
+					<div className="row py-4" style={{background:'#aaa'}}>
+						<Ionicon
+							className="col"
+							icon='ios-ionic'
+							color={'#fff'}
+							fontSize="100px"
+						/>
 					</div>
-					<div className="row">
-						<div className="col">
+					<div className="row py-3" style={{background:'#aaa'}}>
+						<div className="col-9">
 							<MonthPicker
 								year={currentDate.year}
 								month={currentDate.month}
 								onChange={this.changeDate}
 							/>
 						</div>
-						<div className="col">
+						<div className="col-3">
 							<TotalPrice
 								income={totalIncome}
 								outcome={totalOutcome}

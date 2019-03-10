@@ -7,11 +7,11 @@ const ColorArr=Object.keys(Colors).map(key=>Colors[key]);
 
 const CustomedPieChart=({title,categoryData})=>{
     if (categoryData.length===0){
-    	return <h5 className="text-center mt-3">{title}还没有任何数据</h5>
+    	return <h6 className="text-center mt-3">{title}还没有任何数据</h6>
 	} else {
     	return (
     		<div className="pie-chart-com">
-				<h5 className="text-center mt-3">{title}</h5>
+				<h6 className="text-center mt-3">{title}</h6>
 				<ResponsiveContainer width={'100%'} height={300}>
 					<PieChart>
 						<Pie isAnimationActive={false}

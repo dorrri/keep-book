@@ -12,7 +12,7 @@ class PriceForm extends React.Component{
 	}
 	submitForm=(event)=>{
 	    const {item,onFormSubmit}=this.props;
-	    const editMode=!!item.id;
+	    const editMode=!!item;
 
 	    const price=this.priceInput.value.trim()*1;
 	    const title=this.titleInput.value.trim();
@@ -34,7 +34,8 @@ class PriceForm extends React.Component{
 					errorMessage:'',
 				})
 			}
-	    	if (editMode){
+			console.log(title,editMode);
+			if (editMode){
 	    		onFormSubmit({...item,title,price,date},editMode)
 			} else {
 				onFormSubmit({title,price,date},editMode)
@@ -45,12 +46,12 @@ class PriceForm extends React.Component{
 				errorMessage:'请输入所有必选项'
 			})
 		}
-	    event.preventDefault();
+		event.preventDefault();
 	};
 	render() {
-		const {title,price,date}=this.props.item;
+		const {title,price,date}=(this.props.item)?this.props.item:{};
 		return (
-			<form className="price-form-com p-0" onSubmit={(event)=>{this.submitForm(event)}}>
+			<form className="price-form-com p-0" onSubmit={(event)=>{this.submitForm(event)}} noValidate>
 				<div className="form-group text-left">
 					<label className="col-2 col-form-label px-0" htmlFor="inputTitle">标题：</label>
 					<input
@@ -86,12 +87,16 @@ class PriceForm extends React.Component{
 				</div>
 				<div className="row mt-4">
 					<div className="col-2 text-left pr-0">
-						<button type="submit" className="btn btn-primary">提交</button>
+						<button type="submit" className="btn btn-primary">
+							提交
+						</button>
 					</div>
 					<div className="col-2 text-left pl-0">
 						<button className="btn btn-secondary"
 								onClick={this.props.onCancelSubmit}
-						>取消</button>
+						>
+							取消
+						</button>
 					</div>
 					{ !this.state.validatePass &&
 						<div className="alert alert-danger mt-5" role="alert">

@@ -56,7 +56,7 @@ class MonthPicker extends React.Component{
 		return (
 			<div className="month-picker-com dropdown text-left" ref={(ref)=>{this.node=ref}}>
 				<button
-					className="btn btn-lg btn-secondary dropdown-toggle"
+					className="btn btn-lg btn-light dropdown-toggle"
 					id="month-picker-dropdown-btn"
 					onClick={this.toggleDropdown}
 				>

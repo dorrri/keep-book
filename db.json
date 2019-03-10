@@ -35,6 +35,78 @@
       "name": "娱乐",
       "type": "outcome",
       "iconName": "ios-microphone"
+    },
+    {
+      "id": 7,
+      "name": "通讯",
+      "type": "outcome",
+      "iconName": "logo-whatsapp"
+    },
+    {
+      "id": 8,
+      "name": "健身",
+      "type": "outcome",
+      "iconName": "md-bicycle"
+    },
+    {
+      "id": 9,
+      "name": "孩子",
+      "type": "outcome",
+      "iconName": "md-contacts"
+    },
+    {
+      "id": 10,
+      "name": "美容",
+      "type": "outcome",
+      "iconName": "md-female"
+    },
+    {
+      "id": 11,
+      "name": "游戏",
+      "type": "outcome",
+      "iconName": "md-game-controller-b"
+    },
+    {
+      "id": 12,
+      "name": "其他",
+      "type": "outcome",
+      "iconName": "md-apps"
+    },
+    {
+      "id": 13,
+      "name": "工资",
+      "type": "income",
+      "iconName": "md-cash"
+    },
+    {
+      "id": 14,
+      "name": "红包",
+      "type": "income",
+      "iconName": "md-heart"
+    },
+    {
+      "id": 15,
+      "name": "奖金",
+      "type": "income",
+      "iconName": "md-ribbon"
+    },
+    {
+      "id": 16,
+      "name": "投资",
+      "type": "income",
+      "iconName": "logo-buffer"
+    },
+    {
+      "id": 17,
+      "name": "理财",
+      "type": "income",
+      "iconName": "logo-yen"
+    },
+    {
+      "id": 18,
+      "name": "其他",
+      "type": "income",
+      "iconName": "md-apps"
     }
   ],
   "items": [
@@ -115,9 +187,15 @@
       "price": 100,
       "date": "2019-03-04",
       "monthCategory": "2019-03",
-      "timestamp": 1543881600000,
+      "timestamp": 1551657600000,
       "id": "_j0z9no9oj",
-      "cid": "4"
+      "cid": 4,
+      "category": {
+        "id": 4,
+        "name": "购物",
+        "type": "outcome",
+        "iconName": "ios-cart"
+      }
     },
     {
       "title": "新的旅游-2",
@@ -159,7 +237,28 @@
       "monthCategory": "2019-03",
       "timestamp": 1552089600000,
       "id": "_xs4optuuy",
-      "cid": 3
+      "cid": 3,
+      "category": {
+        "id": 3,
+        "name": "交通",
+        "type": "outcome",
+        "iconName": "ios-bus"
+      }
+    },
+    {
+      "title": "工资",
+      "price": 2500,
+      "date": "2019-03-10",
+      "monthCategory": "2019-03",
+      "timestamp": 1552176000000,
+      "id": "_p8agh9itr",
+      "cid": 13,
+      "category": {
+        "id": 13,
+        "name": "工资",
+        "type": "income",
+        "iconName": "md-cash"
+      }
     }
   ]
 }

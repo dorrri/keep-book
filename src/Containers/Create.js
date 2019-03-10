@@ -53,6 +53,7 @@ class Create extends React.Component{
 			}else {
 				this.props.actions.createItem(data,this.state.selectedCategory.id);
 				this.props.history.push('/');
+				console.log(data);
 			}
 		}else{
 	    	this.props.actions.updateItem(data,this.state.selectedCategory.id);

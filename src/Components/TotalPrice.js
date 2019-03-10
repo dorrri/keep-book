@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 
 const TotalPrice=({income,outcome})=>{
     return (
-    	<div className="total-price-com text-right pr-3">
-			<div className="outcome font-weight-bold mb-1">
+    	<div className="total-price-com text-left pr-3" style={{color:'#fff'}}>
+			<div className="outcome mb-1">
 				总支出：
-				<span>{outcome}</span>
+				<span className="font-weight-bold">{outcome}</span>
 			</div>
-			<div className="income font-weight-bold">
+			<div className="income">
 				总收入：
-				<span>{income}</span>
+				<span className="font-weight-bold">{income}</span>
 			</div>
 		</div>
 	)
