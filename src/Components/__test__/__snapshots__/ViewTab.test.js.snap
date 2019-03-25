@@ -1,0 +1,447 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test ViewTab component should render the component to the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ViewTab
+    activeTab="list"
+    onTabChange={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link active"
+            href="#"
+            onClick={[Function]}
+          >
+            <Ionicon
+              beat={false}
+              className="rounded-circle mr-2"
+              color="#007bff"
+              fontSize="30px"
+              icon="ios-paper"
+              rotate={false}
+              shake={false}
+              style={Object {}}
+            />
+            列表模式
+          </a>
+        </li>,
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="#"
+            onClick={[Function]}
+          >
+            <Ionicon
+              beat={false}
+              className="rounded-circle mr-2"
+              color="#007bff"
+              fontSize="30px"
+              icon="ios-pie"
+              rotate={false}
+              shake={false}
+              style={Object {}}
+            />
+            图表模式
+          </a>
+        </li>,
+      ],
+      "className": "nav nav-tabs nav-fill my-4",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <a
+            className="nav-link active"
+            href="#"
+            onClick={[Function]}
+          >
+            <Ionicon
+              beat={false}
+              className="rounded-circle mr-2"
+              color="#007bff"
+              fontSize="30px"
+              icon="ios-paper"
+              rotate={false}
+              shake={false}
+              style={Object {}}
+            />
+            列表模式
+          </a>,
+          "className": "nav-item",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Ionicon
+                beat={false}
+                className="rounded-circle mr-2"
+                color="#007bff"
+                fontSize="30px"
+                icon="ios-paper"
+                rotate={false}
+                shake={false}
+                style={Object {}}
+              />,
+              "列表模式",
+            ],
+            "className": "nav-link active",
+            "href": "#",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "beat": false,
+                "className": "rounded-circle mr-2",
+                "color": "#007bff",
+                "fontSize": "30px",
+                "icon": "ios-paper",
+                "rotate": false,
+                "shake": false,
+                "style": Object {},
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "列表模式",
+          ],
+          "type": "a",
+        },
+        "type": "li",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <a
+            className="nav-link"
+            href="#"
+            onClick={[Function]}
+          >
+            <Ionicon
+              beat={false}
+              className="rounded-circle mr-2"
+              color="#007bff"
+              fontSize="30px"
+              icon="ios-pie"
+              rotate={false}
+              shake={false}
+              style={Object {}}
+            />
+            图表模式
+          </a>,
+          "className": "nav-item",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Ionicon
+                beat={false}
+                className="rounded-circle mr-2"
+                color="#007bff"
+                fontSize="30px"
+                icon="ios-pie"
+                rotate={false}
+                shake={false}
+                style={Object {}}
+              />,
+              "图表模式",
+            ],
+            "className": "nav-link",
+            "href": "#",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "beat": false,
+                "className": "rounded-circle mr-2",
+                "color": "#007bff",
+                "fontSize": "30px",
+                "icon": "ios-pie",
+                "rotate": false,
+                "shake": false,
+                "style": Object {},
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "图表模式",
+          ],
+          "type": "a",
+        },
+        "type": "li",
+      },
+    ],
+    "type": "ul",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <li
+            className="nav-item"
+          >
+            <a
+              className="nav-link active"
+              href="#"
+              onClick={[Function]}
+            >
+              <Ionicon
+                beat={false}
+                className="rounded-circle mr-2"
+                color="#007bff"
+                fontSize="30px"
+                icon="ios-paper"
+                rotate={false}
+                shake={false}
+                style={Object {}}
+              />
+              列表模式
+            </a>
+          </li>,
+          <li
+            className="nav-item"
+          >
+            <a
+              className="nav-link"
+              href="#"
+              onClick={[Function]}
+            >
+              <Ionicon
+                beat={false}
+                className="rounded-circle mr-2"
+                color="#007bff"
+                fontSize="30px"
+                icon="ios-pie"
+                rotate={false}
+                shake={false}
+                style={Object {}}
+              />
+              图表模式
+            </a>
+          </li>,
+        ],
+        "className": "nav nav-tabs nav-fill my-4",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <a
+              className="nav-link active"
+              href="#"
+              onClick={[Function]}
+            >
+              <Ionicon
+                beat={false}
+                className="rounded-circle mr-2"
+                color="#007bff"
+                fontSize="30px"
+                icon="ios-paper"
+                rotate={false}
+                shake={false}
+                style={Object {}}
+              />
+              列表模式
+            </a>,
+            "className": "nav-item",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <Ionicon
+                  beat={false}
+                  className="rounded-circle mr-2"
+                  color="#007bff"
+                  fontSize="30px"
+                  icon="ios-paper"
+                  rotate={false}
+                  shake={false}
+                  style={Object {}}
+                />,
+                "列表模式",
+              ],
+              "className": "nav-link active",
+              "href": "#",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "beat": false,
+                  "className": "rounded-circle mr-2",
+                  "color": "#007bff",
+                  "fontSize": "30px",
+                  "icon": "ios-paper",
+                  "rotate": false,
+                  "shake": false,
+                  "style": Object {},
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "列表模式",
+            ],
+            "type": "a",
+          },
+          "type": "li",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <a
+              className="nav-link"
+              href="#"
+              onClick={[Function]}
+            >
+              <Ionicon
+                beat={false}
+                className="rounded-circle mr-2"
+                color="#007bff"
+                fontSize="30px"
+                icon="ios-pie"
+                rotate={false}
+                shake={false}
+                style={Object {}}
+              />
+              图表模式
+            </a>,
+            "className": "nav-item",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <Ionicon
+                  beat={false}
+                  className="rounded-circle mr-2"
+                  color="#007bff"
+                  fontSize="30px"
+                  icon="ios-pie"
+                  rotate={false}
+                  shake={false}
+                  style={Object {}}
+                />,
+                "图表模式",
+              ],
+              "className": "nav-link",
+              "href": "#",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "beat": false,
+                  "className": "rounded-circle mr-2",
+                  "color": "#007bff",
+                  "fontSize": "30px",
+                  "icon": "ios-pie",
+                  "rotate": false,
+                  "shake": false,
+                  "style": Object {},
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "图表模式",
+            ],
+            "type": "a",
+          },
+          "type": "li",
+        },
+      ],
+      "type": "ul",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
